@@ -180,8 +180,9 @@ namespace MoPubSDK_ARMv7 {
 		[Export ("ignoresAutorefresh")]
 		bool IgnoresAutorefresh { get; set; }
 	}
-
-	[Model, BaseType (typeof (NSObject))]
+		
+	[BaseType (typeof (NSObject))]
+	[Model][Protocol]
 	public partial interface MPAdViewDelegate {
 
 		[Export ("viewControllerForPresentingModalView")]// ("ObjC method massaged into getter property", "/Users/dmast/Documents/sdks/mopub-ios-sdk-1.7/mopub-ios-sdk/MoPubSDK/MPAdView.h", Line = 310)]
@@ -301,7 +302,8 @@ namespace MoPubSDK_ARMv7 {
 		void CustomEventActionWillBegin ();
 	}
 
-	[Model, BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject))]
+	[Model][Protocol]
 	public partial interface MPInterstitialAdControllerDelegate {
 
 		[Export ("interstitialDidLoadAd:")]
