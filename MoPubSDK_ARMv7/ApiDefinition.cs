@@ -1,16 +1,10 @@
 using System.Drawing;
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.UIKit;
-using MonoTouch.CoreLocation;
-using MonoTouch.CoreVideo;
-using MonoTouch.AVFoundation;
-using MonoTouch.MediaPlayer;
-using MonoTouch.StoreKit;
-using MonoTouch.CoreMedia;
-using MonoTouch.EventKit;
-using MonoTouch.EventKitUI;
+using Foundation;
+using UIKit;
+using ObjCRuntime;
+using CoreLocation;
+
 
 namespace MoPubSDK_ARMv7 {
 

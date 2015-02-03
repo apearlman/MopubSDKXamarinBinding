@@ -1,17 +1,10 @@
 using System.Drawing;
 using System;
 
-using MonoTouch.Foundation;
-using MonoTouch.CoreLocation;
-using MonoTouch.UIKit;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.SystemConfiguration;
-using MonoTouch.CoreMedia;
-using MonoTouch.EventKit;
-using MonoTouch.EventKitUI;
-using MonoTouch.AVFoundation;
-using MonoTouch.MediaPlayer;
-using MonoTouch.AdSupport;
+using Foundation;
+using ObjCRuntime;
+using CoreLocation;
+using UIKit;
 
 
 namespace MoPubSDK_i386 {
