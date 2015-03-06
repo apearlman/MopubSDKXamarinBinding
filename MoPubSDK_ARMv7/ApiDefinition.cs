@@ -1,10 +1,17 @@
 using System.Drawing;
 using System;
 using Foundation;
-using UIKit;
-using ObjCRuntime;
-using CoreLocation;
 
+using ObjCRuntime;
+using UIKit;
+using CoreLocation;
+using CoreVideo;
+using AVFoundation;
+using MediaPlayer;
+using StoreKit;
+using CoreMedia;
+using EventKit;
+using EventKitUI;
 
 namespace MoPubSDK_ARMv7 {
 
@@ -48,7 +55,7 @@ namespace MoPubSDK_ARMv7 {
 		void TrackClick ();
 	}
 
-	[BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject)), Protocol]
 	public partial interface MPInterstitialCustomEvent {
 
 		[Export ("requestInterstitialWithCustomEventInfo:")]
@@ -64,7 +71,7 @@ namespace MoPubSDK_ARMv7 {
 		MPInterstitialCustomEventDelegate Delegate { get; set; }
 	}
 
-	[BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject)), Protocol]
 	public partial interface MPReachability {
 
 		[Static, Export ("reachabilityForLocalWiFi")]// ("ObjC method massaged into getter property", "/Users/dmast/Documents/sdks/mopub-ios-sdk-1.7/mopub-ios-sdk/MoPubSDK/Internal/Utility/MPReachability.h", Line = 58)]
@@ -74,7 +81,7 @@ namespace MoPubSDK_ARMv7 {
 		bool HasWifi { get; }
 	}
 
-	[BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject)), Protocol]
 	public partial interface MRVideoPlayerManager {
 
 		[Export ("delegate", ArgumentSemantic.Assign)]
@@ -105,7 +112,7 @@ namespace MoPubSDK_ARMv7 {
 
 
 
-	[BaseType (typeof (UIView))]
+	[BaseType (typeof (UIView)), Protocol]
 	public partial interface MPAdView {
 
 		[Export ("initWithAdUnitId:size:")]
@@ -229,7 +236,7 @@ namespace MoPubSDK_ARMv7 {
 		void TrackClick ();
 	}
 
-	[BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject)), Protocol]
 	public partial interface MPBannerCustomEvent {
 
 		[Export ("requestAdWithSize:customEventInfo:")]
@@ -250,7 +257,7 @@ namespace MoPubSDK_ARMv7 {
 
 
 
-	[BaseType (typeof (UIViewController))]
+	[BaseType (typeof (UIViewController)), Protocol]
 	public partial interface MPInterstitialAdController {
 
 		[Static, Export ("interstitialAdControllerForAdUnitId:")]
